@@ -45,6 +45,33 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Using the app
+
+Resources available for access via API:
+* [**Students**] /students/...
+* [**Teachers**] /teachers/...
+* * [**Classrooms**] /classroom/...
+
+
+Requests to the API must follow the standards:
+| Method | Description |
+|---|---|
+| `GET` | Returns information from one or more records. |
+| `POST` | Used to create a new record. |
+| `PUT` | Update record data or change its status. |
+| `DELETE` | Removes a system registry. |
+
+| Code | Description |
+|---|---|
+| `200` | Request executed successfully (success).|
+| `400` | Validation errors or the entered fields do not exist in the system.|
+| `401` | Invalid access data.|
+| `404` | Searched record not found.|
+| `405` | Method not implemented.|
+| `410` | Searched record has been deleted from the system and is no longer available.|
+| `422` | Data entered is outside the scope defined for the field.|
+| `429` | Maximum number of requests reached. (*wait a few seconds and try again*)|
+
 ## Test
 
 ```bash
